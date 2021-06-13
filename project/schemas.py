@@ -1,7 +1,5 @@
 from typing import List, Optional, Any
-from datetime import datetime
-from pydantic import BaseModel, Field
-
+from pydantic import BaseModel, Field, EmailStr
 
 
 class ActionResponse(BaseModel):
@@ -31,7 +29,7 @@ class TaskEdit(BaseModel):
 
 
 class TaskCreate(BaseModel):
-    email: str
+    email: EmailStr
     username: str
     text: str
 
